@@ -1,0 +1,420 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    color: #2C3E50;
+}
+
+/* Sidebar */
+.sidebar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(44, 62, 80);
+    padding-top: 20px;
+    z-index: 3;
+    overflow: autos;
+    overflow-x: hidden;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar img {
+    width: 40px;
+    height: 40px;
+    margin-left: 80px;
+}
+
+.sidebar h3 {
+    color: white;
+    font-size: 22px;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 30px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.sidebar nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    padding: 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #1ABC9C;
+    color: #fff;
+}
+
+/* Toolbar */
+.toolbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 60px;
+    background-color: rgb(44, 62, 80);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    width: 100%; 
+    max-width: calc(100% - 150px); 
+}
+
+#toolbar-container {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+#toolbar-container li {
+    list-style: none;
+}
+
+#toolbar-container li a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+#toolbar-container li a:hover {
+    color: #1ABC9C;
+    transform: scale(1.2); 
+}
+
+
+/* Main Content */
+.main-content {
+    padding: 20px;
+    margin-left: 220px; 
+    margin-top: 80px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 40px;
+    scroll-margin-top: 80px;
+}
+
+section h2 {
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+section p {
+    line-height: 1.6;
+}
+
+details p {
+    margin: 0px;
+    font-size: 15px;
+}
+
+/* Table Style */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+table th {
+    background-color: #34495E;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Project Section */
+.project-title {
+    display: flex;
+    align-items: center;
+}
+
+.project-title h3 {
+    margin: 0px;
+}
+
+.project-tool {
+    margin-top: 5px;
+    font-size: 1em;
+    font-weight: lighter;
+}
+.project-title a {
+    margin-left: 10px;
+    color: #333;
+    text-decoration: none;
+    font-size: 26px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.project-title a:hover i {
+    transform: scale(1.2);
+    color: #1ABC9C;
+}
+
+/* Style for the video row */
+.video-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+
+/* Style for each video container */
+.video-container {
+    text-align: center;
+    margin: 0 20px;
+}
+
+/* Style for the arrow between the videos */
+.arrow {
+    font-size: 3rem;
+    color: #333;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Style for video element */
+.video-container video {
+    margin-top: 0;
+    width: 320px; 
+    height: 200px;
+    border-radius: 8px;
+    
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for the video */
+.video-container video:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Heading (h4) for each video title */
+.video-container h4 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+/* Gallery Container */
+#gallery {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    gap: 20px; 
+    padding: 20px;
+    position: relative;
+}
+
+#gallery ul {
+    list-style-type: none;
+}
+
+/* Thumbnail images */
+#gallery img {
+    width: 150px;
+    height: 100px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#gallery img:hover {
+    transform: scale(1.2); 
+}
+
+/* Larger image hover effect */
+#gallery span {
+    display: none;
+    position: absolute;
+    top: 40%;
+    right: -150px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+#gallery a:hover span {
+    display: block;
+}
+
+/* Style for enlarged images */
+#gallery span img {
+    width: 500px;  
+    height: 350px; 
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+  
+/* Media Section */
+#media {
+    text-align: center;
+    margin-top: 50px;
+}
+
+video, audio {
+    margin-top: 20px;
+}
+
+/* Contact Form Section */
+#contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form label {
+    font-size: 1.1em;
+    margin-bottom: 1px;
+    color: #333;
+}
+
+#contact-form input, 
+#contact-form textarea {
+    width: 400px;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border-color: #2c3e50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+#contact-form button {
+    background-color: #2c3e50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 200px;
+}
+
+#contact-form button:hover {
+    background-color: #2980b9;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2C3E50;
+    color: white;
+    position: relative;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1, h2, h3 {
+        font-size: 18px;
+    }
+
+    .sidebar {
+        width: 100px;
+    }
+
+    .toolbar {
+        left: 100px;
+        width: calc(100% - 100px);
+    }
+
+    .main-content {
+        margin-left: 110px;
+    }
+
+    #gallery ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #gallery li {
+        width: 80px;
+    }
+}
+
+@media (max-width: 365px) {
+    h1, h2, h3 {
+        font-size: 14px;
+    }
+
+    .sidebar {
+        width: 70px;
+    }
+
+    .toolbar {
+        left: 70px;
+        width: calc(100% - 70px);
+    }
+
+    .main-content {
+        margin-left: 80px;
+    }
+
+    #gallery ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    #gallery li {
+        width: 60px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+}
